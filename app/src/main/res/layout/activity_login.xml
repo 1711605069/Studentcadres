@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tv_main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:text="欢迎登陆学生干部基本信息设计与实现系统"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_main_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="148dp"
+        android:gravity="center"
+        android:text="帐号"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText_main_account"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_title" />
+
+    <TextView
+        android:id="@+id/tv_main_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="密码"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_main_account"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_account" />
+
+    <EditText
+        android:id="@+id/editText_main_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="请输入帐号"
+        android:inputType="textPersonName"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_main_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_main_account" />
+
+    <EditText
+        android:id="@+id/editText_main_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_main_password"
+        app:layout_constraintEnd_toEndOf="@+id/editText_main_account"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_main_password" />
+
+    <Button
+        android:id="@+id/btn_main_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="登陆"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_main_reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_main_password" />
+
+    <Button
+        android:id="@+id/btn_main_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="109dp"
+        android:layout_marginEnd="159dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="重置"
+        android:textSize="50sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_main_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_login" />
+
+    <RadioGroup
+        android:id="@+id/radGru_main_sex"
+        android:layout_width="161dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="188dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_main_reset"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/btn_main_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_reset">
+
+        <RadioButton
+            android:id="@+id/radBtn_main_male"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/radBtn_main_female"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="女" />
+    </RadioGroup>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+</android.support.constraint.ConstraintLayout>

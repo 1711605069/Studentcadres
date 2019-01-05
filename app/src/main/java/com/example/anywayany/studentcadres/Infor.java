@@ -8,9 +8,6 @@ public class Infor {
     private String department;
     private String telephone;
 
-
-
-
     public int get_id() {
         return _id;
     }
